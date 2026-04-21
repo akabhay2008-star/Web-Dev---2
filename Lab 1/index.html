@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Event Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>🎯 Smart Event Dashboard</h1>
+  </header>
+
+  <main class="container">
+
+    <section class="card">
+      <h2>Add New Event</h2>
+      <form id="eventForm">
+        <label>Event Title: </label>
+        <input type="text" id="title" required>
+
+        <label>Event Date:</label>
+        <input type="date" id="date" required>
+
+        <label>Category:</label>
+        <select id="category">
+          <option>Conference</option>
+          <option>Workshop</option>
+          <option>Meetup</option>
+        </select>
+
+        <label>Description:</label>
+        <textarea id="description" rows="3" required></textarea>
+
+        <button type="submit" class="primary-btn">Add Event</button>
+      </form>
+    </section>
+
+    <section class="card wide">
+      <h2>My Events</h2>
+      <div class="actions">
+        <button id="clearAll" class="secondary-btn">Clear All Events</button>
+        <button id="addSample" class="secondary-btn">Add Sample Events</button>
+      </div>
+
+      <div id="eventContainer" class="event-list">
+        <p class="empty">No events yet. Add your first event!</p>
+      </div>
+    </section>
+
+    <section class="card full">
+      <h2>DOM Manipulation Demo</h2>
+      <h3>innerText vs innerHTML vs textContent</h3>
+      <div class="dom-box">
+        <p><b>Original HTML:</b> &lt;strong&gt;Bold Text&lt;/strong&gt; with spaces</p>
+        <p><b>innerHTML:</b> Renders HTML tags --> <strong>Bold Text</strong> with spaces</p>
+        <p><b>innerText:</b> Removes HTML, collapses spaces --> Bold Text with spaces</p>
+        <p><b>textContent:</b> Removes HTML, keeps spaces --> Bold Text   with   spaces</p>
+        <p class="key">You pressed: <span id="keyPressed">None</span></p>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
